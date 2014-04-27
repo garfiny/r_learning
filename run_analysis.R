@@ -87,3 +87,7 @@ rename_column <- function(colname) {
 write_to_file <- function(data, path) {
   write.csv(data, path, row.names = F)
 }
+
+run_analysis <- function() {
+  write_to_file(calculate_means(merge_data()), "tidy_data/tidy.txt")
+}
